@@ -26,6 +26,7 @@ openstacksdk = "*"
 boto3 = "*"
 jinja2 = "*"
 dynaconf = {extras = ["yaml"], version = "*"}
+distro = "*"
 gitpython = "*"
 beautifulsoup4 = "*"
 coloredlogs = "*"
