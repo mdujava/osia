@@ -31,6 +31,8 @@ beautifulsoup4 = "*"
 coloredlogs = "*"
 urllib3 = "<2" # add temporarily to enable dependency resolution in real time
 semantic-version = "^2.10.0"
+mypy = "^1.11.2"
+boto3-stubs = "^1.35.39"
 
 [tool.poetry.dev-dependencies]
 flake8 = "*"
@@ -40,6 +42,10 @@ sphinx = "*"
 recommonmark = "*"
 sphinx-rtd-theme = "*"
 sphinx-argparse = "*"
+types-requests = "*"
+types-PyYAML = "*"
+types-beautifulsoup4 = "*"
+types-html5lib = "*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
