@@ -133,6 +133,11 @@ def _exec_delete_cluster(args):
         storage.delete_directory(conf['cluster_name'])
 
 
+def _exec_download_insaller(args):
+    conf = _merge_dictionaries(args)
+    print(conf['installer'])
+
+
 def _get_helper(parser: argparse.ArgumentParser):
     def printer(unused_conf):
         print("Operation not set, please specify either install or clean!")
@@ -184,6 +189,12 @@ def _setup_parser():
 
     clean = sub_parsers.add_parser('clean', help='Remove cluster', parents=[commons])
     clean.set_defaults(func=_exec_delete_cluster)
+
+    download = sub_parsers.add_parser('download-installer', help='Download installer',
+                                      parents=[commons])
+    download.add_argument("--enable-fips", action='store_true')
+    download.set_defaults(func=_exec_download_insaller)
+
     return parser
 
 
